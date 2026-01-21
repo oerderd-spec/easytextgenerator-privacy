@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datenschutzerklaerung - EasyTextGenerator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.7;
+            color: #F3F4F6;
+            background: #0F172A;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: #1F2937;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+            padding: 40px;
+            border: 1px solid #374151;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #374151;
+        }
+        .logo {
+            font-size: 48px;
+            margin-bottom: 15px;
+            color: #60A5FA;
+            font-weight: 700;
+        }
+        h1 {
+            color: #F3F4F6;
+            font-size: 26px;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+        .app-name {
+            color: #9CA3AF;
+            font-size: 18px;
+            font-weight: 500;
+        }
+        .last-updated {
+            color: #6B7280;
+            font-size: 13px;
+            margin-top: 12px;
+        }
+        h2 {
+            color: #F3F4F6;
+            font-size: 18px;
+            margin-top: 32px;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #374151;
+            font-weight: 700;
+        }
+        h3 {
+            color: #9CA3AF;
+            font-size: 15px;
+            margin-top: 20px;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        p {
+            margin-bottom: 14px;
+            color: #D1D5DB;
+            font-size: 15px;
+        }
+        ul {
+            margin: 14px 0;
+            padding-left: 0;
+            list-style: none;
+        }
+        li {
+            margin-bottom: 10px;
+            color: #D1D5DB;
+            font-size: 15px;
+            padding-left: 24px;
+            position: relative;
+        }
+        li::before {
+            content: "-";
+            color: #6B7280;
+            position: absolute;
+            left: 8px;
+        }
+        a {
+            color: #60A5FA;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .highlight-box {
+            background: linear-gradient(180deg, #374151 0%, #1F2937 100%);
+            border: 1px solid #4B5563;
+            border-radius: 14px;
+            padding: 20px 24px;
+            margin: 24px 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+        .highlight-box h3 {
+            color: #10B981;
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+        .highlight-box p {
+            margin-bottom: 0;
+        }
+        .check-list li::before {
+            content: "[OK]";
+            color: #10B981;
+            font-weight: bold;
+            font-size: 12px;
+        }
+        .contact-box {
+            background: linear-gradient(180deg, #374151 0%, #2D3748 100%);
+            border: 1px solid #4B5563;
+            border-radius: 14px;
+            padding: 24px;
+            margin-top: 32px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+        .contact-box h3 {
+            color: #F3F4F6;
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-size: 17px;
+        }
+        .contact-box p {
+            margin-bottom: 12px;
+        }
+        .contact-box a {
+            color: #60A5FA;
+            font-weight: 600;
+            font-size: 16px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 24px;
+            border-top: 1px solid #374151;
+            color: #6B7280;
+            font-size: 13px;
+        }
+        .footer p {
+            color: #6B7280;
+            margin-bottom: 6px;
+        }
+        .lang-switch {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+        .lang-switch a {
+            display: inline-block;
+            padding: 10px 24px;
+            margin: 0 6px;
+            background: linear-gradient(180deg, #374151 0%, #2D3748 100%);
+            color: #D1D5DB;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 14px;
+            border: 1px solid #4B5563;
+            transition: all 0.2s ease;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+        }
+        .lang-switch a:hover {
+            background: linear-gradient(180deg, #4B5563 0%, #374151 100%);
+            text-decoration: none;
+            transform: translateY(-1px);
+        }
+        .lang-switch a.active {
+            background: linear-gradient(180deg, #4B5563 0%, #374151 100%);
+            color: #F3F4F6;
+            border-color: #6B7280;
+        }
+        strong {
+            color: #F3F4F6;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 12px;
+            }
+            .container {
+                padding: 24px;
+                border-radius: 16px;
+            }
+            h1 {
+                font-size: 22px;
+            }
+            h2 {
+                font-size: 16px;
+            }
+            .logo {
+                font-size: 36px;
+            }
+            .lang-switch a {
+                padding: 8px 16px;
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="lang-switch">
+            <a href="#" class="active" onclick="showGerman(); return false;">DE Deutsch</a>
+            <a href="#" id="en-btn" onclick="showEnglish(); return false;">EN English</a>
+        </div>
+
+        <div class="header">
+            <div class="logo">ETG</div>
+            <h1>Datenschutzerklaerung</h1>
+            <div class="app-name">EasyTextGenerator</div>
+            <div class="last-updated">Stand: Januar 2026</div>
+        </div>
+
+        <!-- GERMAN VERSION -->
+        <div id="content-de">
+            <div class="highlight-box">
+                <h3>Datenschutz - Das Wichtigste zuerst</h3>
+                <p><strong>EasyTextGenerator arbeitet komplett offline.</strong> Deine Texte und persoenlichen Daten verlassen niemals dein Geraet. Wir haben keinen Zugriff auf deine Eingaben.</p>
+            </div>
+
+            <h2>1. Verantwortlicher</h2>
+            <p>
+                NC Software Development<br>
+                E-Mail: <a href="mailto:nc.softwaredevelopment@gmail.com">nc.softwaredevelopment@gmail.com</a>
+            </p>
+
+            <h2>2. Welche Daten werden verarbeitet?</h2>
+            
+            <h3>Daten, die auf deinem Geraet bleiben:</h3>
+            <ul>
+                <li><strong>Deine Texteingaben</strong> (Empfaenger, Absender, generierte Texte) - werden nur lokal verarbeitet</li>
+                <li><strong>App-Einstellungen</strong> (Sprache, Schriftgroesse, Theme) - gespeichert via AsyncStorage auf deinem Geraet</li>
+                <li><strong>Datenschutz-Zustimmung</strong> - lokal gespeichert, damit das Modal nicht erneut erscheint</li>
+            </ul>
+
+            <h3>Daten, die uebertragen werden koennen:</h3>
+            <ul>
+                <li><strong>Werbung (Google AdMob)</strong> - Falls Werbung aktiviert ist, kann Google anonymisierte Daten zur Anzeigenauslieferung erheben. Siehe <a href="https://policies.google.com/privacy" target="_blank">Google Datenschutz</a>.</li>
+            </ul>
+
+            <h2>3. Keine Cloud, keine Server</h2>
+            <p>Diese App:</p>
+            <ul>
+                <li>Nutzt <strong>keine</strong> Cloud-Dienste</li>
+                <li>Sendet <strong>keine</strong> Texte an externe Server</li>
+                <li>Erstellt <strong>kein</strong> Benutzerkonto</li>
+                <li>Sammelt <strong>keine</strong> persoenlichen Daten</li>
+                <li>Enthaelt <strong>keine</strong> Tracking-Tools oder Analytics</li>
+            </ul>
+
+            <h2>4. Werbung (Google AdMob)</h2>
+            <p>Die App kann Werbeanzeigen von Google AdMob enthalten. Google kann hierbei:</p>
+            <ul>
+                <li>Geraeteinformationen (Geraetetyp, Betriebssystem) erheben</li>
+                <li>Werbe-ID verwenden (kann in Geraeteeinstellungen zurueckgesetzt werden)</li>
+                <li>Anonymisierte Nutzungsdaten fuer personalisierte Werbung verwenden</li>
+            </ul>
+            <p>Du kannst personalisierte Werbung in deinen Geraeteeinstellungen deaktivieren.</p>
+
+            <h2>5. Berechtigungen</h2>
+            <ul>
+                <li><strong>Kamera (optional)</strong> - Nur fuer die Scan-Funktion zum Erfassen von Dokumenten. Bilder werden nur lokal verarbeitet und nicht gespeichert oder uebertragen.</li>
+                <li><strong>Internet</strong> - Nur fuer Werbeanzeigen erforderlich.</li>
+            </ul>
+
+            <h2>6. Deine Rechte (DSGVO)</h2>
+            <p>Du hast das Recht auf:</p>
+            <ul>
+                <li>Auskunft ueber deine Daten</li>
+                <li>Berichtigung unrichtiger Daten</li>
+                <li>Loeschung deiner Daten</li>
+                <li>Widerspruch gegen die Verarbeitung</li>
+                <li>Beschwerde bei einer Aufsichtsbehoerde</li>
+            </ul>
+            <p>Da wir keine personenbezogenen Daten speichern, kannst du alle App-Daten durch Deinstallation der App vollstaendig loeschen.</p>
+
+            <h2>7. Aenderungen dieser Erklaerung</h2>
+            <p>Bei wesentlichen Aenderungen dieser Datenschutzerklaerung wird eine neue Version in der App und auf dieser Seite veroeffentlicht.</p>
+
+            <div class="contact-box">
+                <h3>Kontakt</h3>
+                <p>Bei Fragen zum Datenschutz erreichst du uns unter:</p>
+                <a href="mailto:nc.softwaredevelopment@gmail.com">nc.softwaredevelopment@gmail.com</a>
+            </div>
+        </div>
+
+        <!-- ENGLISH VERSION -->
+        <div id="content-en" style="display: none;">
+            <div class="highlight-box">
+                <h3>Privacy - The Most Important Thing First</h3>
+                <p><strong>EasyTextGenerator works completely offline.</strong> Your texts and personal data never leave your device. We have no access to your inputs.</p>
+            </div>
+
+            <h2>1. Responsible Party</h2>
+            <p>
+                NC Software Development<br>
+                Email: <a href="mailto:nc.softwaredevelopment@gmail.com">nc.softwaredevelopment@gmail.com</a>
+            </p>
+
+            <h2>2. What Data is Processed?</h2>
+            
+            <h3>Data that stays on your device:</h3>
+            <ul>
+                <li><strong>Your text inputs</strong> (recipient, sender, generated texts) - processed locally only</li>
+                <li><strong>App settings</strong> (language, font size, theme) - stored via AsyncStorage on your device</li>
+                <li><strong>Privacy consent</strong> - stored locally so the modal doesn't appear again</li>
+            </ul>
+
+            <h3>Data that may be transmitted:</h3>
+            <ul>
+                <li><strong>Advertising (Google AdMob)</strong> - If ads are enabled, Google may collect anonymized data for ad delivery. See <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a>.</li>
+            </ul>
+
+            <h2>3. No Cloud, No Servers</h2>
+            <p>This app:</p>
+            <ul>
+                <li>Does <strong>not</strong> use cloud services</li>
+                <li>Does <strong>not</strong> send texts to external servers</li>
+                <li>Does <strong>not</strong> create user accounts</li>
+                <li>Does <strong>not</strong> collect personal data</li>
+                <li>Contains <strong>no</strong> tracking tools or analytics</li>
+            </ul>
+
+            <h2>4. Advertising (Google AdMob)</h2>
+            <p>The app may contain advertisements from Google AdMob. Google may:</p>
+            <ul>
+                <li>Collect device information (device type, operating system)</li>
+                <li>Use advertising ID (can be reset in device settings)</li>
+                <li>Use anonymized usage data for personalized advertising</li>
+            </ul>
+            <p>You can disable personalized advertising in your device settings.</p>
+
+            <h2>5. Permissions</h2>
+            <ul>
+                <li><strong>Camera (optional)</strong> - Only for the scan function to capture documents. Images are processed locally only and not stored or transmitted.</li>
+                <li><strong>Internet</strong> - Required only for advertisements.</li>
+            </ul>
+
+            <h2>6. Your Rights (GDPR)</h2>
+            <p>You have the right to:</p>
+            <ul>
+                <li>Access your data</li>
+                <li>Rectification of incorrect data</li>
+                <li>Deletion of your data</li>
+                <li>Object to processing</li>
+                <li>Lodge a complaint with a supervisory authority</li>
+            </ul>
+            <p>Since we do not store personal data, you can completely delete all app data by uninstalling the app.</p>
+
+            <h2>7. Changes to This Policy</h2>
+            <p>In case of significant changes to this privacy policy, a new version will be published in the app and on this page.</p>
+
+            <div class="contact-box">
+                <h3>Contact</h3>
+                <p>For questions about privacy, you can reach us at:</p>
+                <a href="mailto:nc.softwaredevelopment@gmail.com">nc.softwaredevelopment@gmail.com</a>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>2026 EasyTextGenerator by nippes_coding</p>
+            <p>Made in Germany</p>
+        </div>
+    </div>
+
+    <script>
+        function showGerman() {
+            document.getElementById('content-de').style.display = 'block';
+            document.getElementById('content-en').style.display = 'none';
+            document.querySelector('.lang-switch a:first-child').classList.add('active');
+            document.getElementById('en-btn').classList.remove('active');
+        }
+        function showEnglish() {
+            document.getElementById('content-de').style.display = 'none';
+            document.getElementById('content-en').style.display = 'block';
+            document.querySelector('.lang-switch a:first-child').classList.remove('active');
+            document.getElementById('en-btn').classList.add('active');
+        }
+    </script>
+</body>
+</html>
